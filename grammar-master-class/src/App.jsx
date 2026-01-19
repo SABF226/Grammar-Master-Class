@@ -441,14 +441,14 @@ export default function JKDGrammarSession() {
                               ? "bg-green-500 text-white shadow-lg"
                               : "bg-red-500 text-white shadow-lg"
                             : showExplanation &&
-                              idx === warmUpQuestions[currentQuestion].correct
-                            ? "bg-green-200 border-2 border-green-500"
-                            : "bg-white hover:bg-blue-50 border-2 border-gray-200"
+                                idx === warmUpQuestions[currentQuestion].correct
+                              ? "bg-green-200 border-2 border-green-500"
+                              : "bg-white hover:bg-blue-50 border-2 border-gray-200"
                         }`}
                       >
                         {String.fromCharCode(65 + idx)}) {option}
                       </button>
-                    )
+                    ),
                   )}
                 </div>
               </div>
@@ -512,8 +512,8 @@ export default function JKDGrammarSession() {
                         domain.frequency === "HIGH"
                           ? "#DC2626"
                           : domain.frequency === "MEDIUM"
-                          ? "#F59E0B"
-                          : "#10B981",
+                            ? "#F59E0B"
+                            : "#10B981",
                     }}
                   >
                     <div className="flex items-center justify-between mb-4">
@@ -525,8 +525,8 @@ export default function JKDGrammarSession() {
                           domain.frequency === "HIGH"
                             ? "bg-red-100 text-red-700"
                             : domain.frequency === "MEDIUM"
-                            ? "bg-yellow-100 text-yellow-700"
-                            : "bg-green-100 text-green-700"
+                              ? "bg-yellow-100 text-yellow-700"
+                              : "bg-green-100 text-green-700"
                         }`}
                       >
                         {domain.frequency}
@@ -666,14 +666,61 @@ export default function JKDGrammarSession() {
         )}
 
         {/* Footer */}
-        <div className="mt-8 text-center text-gray-600">
-          <p className="text-sm font-semibold">
-            📚 BIT English Club • JKD Grammar Master Class • Session 1 of 4
-          </p>
-          <p className="text-xs mt-1">
-            Excellence in Grammar • Speed in Execution
-          </p>
-        </div>
+        <footer className="mt-8 bg-gray-800 text-white py-8 rounded-xl">
+          <div className="max-w-6xl mx-auto px-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {/* Contact Section */}
+              <div>
+                <h3 className="text-lg font-bold mb-4 flex items-center gap-2">
+                  <i className="fas fa-address-card"></i>
+                  Contact Me
+                </h3>
+                <div className="space-y-3">
+                  <a
+                    href="https://www.linkedin.com/in/sabf-sanon"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-3 text-gray-300 hover:text-blue-400 transition-colors"
+                  >
+                    <i className="fab fa-linkedin text-xl"></i>
+                    <span>Abdoul Ben SANON</span>
+                  </a>
+                  <a
+                    href="mailto:sabfsanon@gmail.com"
+                    className="flex items-center gap-3 text-gray-300 hover:text-blue-400 transition-colors"
+                  >
+                    <i className="fas fa-envelope text-xl"></i>
+                    <span>sabfsanon@gmail.com</span>
+                  </a>
+                  <a
+                    href="https://www.github.com/SABF226"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-3 text-gray-300 hover:text-blue-400 transition-colors"
+                  >
+                    <i className="fab fa-github text-xl"></i>
+                    <span>SABF226</span>
+                  </a>
+                </div>
+              </div>
+
+              {/* Copyright & Info */}
+              <div className="text-center md:text-right">
+                <h3 className="text-lg font-bold mb-4">📚 BIT English Club</h3>
+                <p className="text-gray-400 text-sm mb-2">
+                  JKD Grammar Master Class • Session 1 of 4
+                </p>
+                <p className="text-gray-500 text-xs">
+                  Excellence in Grammar • Speed in Execution
+                </p>
+                <p className="text-gray-400 text-sm mt-4">
+                  &copy; {new Date().getFullYear()} BIT English Club. All rights
+                  reserved.
+                </p>
+              </div>
+            </div>
+          </div>
+        </footer>
       </div>
     </div>
   );

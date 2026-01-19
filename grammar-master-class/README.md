@@ -1,16 +1,87 @@
-# React + Vite
+# Grammar Master Class - JKD English Quiz
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A comprehensive grammar training application for BIT English Club's JKD Language Network competition format.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- 📚 Grammar Warm-Up (10 timed MCQs)
+- 🎯 Core Grammar Drills (6 domains)
+- ⚡ Speed Challenge (Team vs Clock)
+- 📊 Error Analysis
+- 📱 Fully Responsive Design
 
-## React Compiler
+## Deploy to Vercel
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Option 1: Vercel CLI (Recommended)
 
-## Expanding the ESLint configuration
+```bash
+# Install Vercel CLI
+npm i -g vercel
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+# Navigate to project directory
+cd grammar-master-class
+
+# Login to Vercel (first time only)
+vercel login
+
+# Deploy
+vercel
+```
+
+### Option 2: Vercel Dashboard (No CLI)
+
+1. Go to [vercel.com](https://vercel.com) and sign in
+2. Click "Add New..." → "Project"
+3. Import from GitHub or drag-and-drop the `grammar-master-class` folder
+4. Vercel will auto-detect the Vite configuration
+5. Click "Deploy"
+
+### Option 3: Vercel for GitHub
+
+1. Push this folder to a GitHub repository
+2. Go to [vercel.com](https://vercel.com) and click "Add GitHub Repository"
+3. Select the repository
+4. Vercel will deploy automatically on every push
+
+## Local Development
+
+```bash
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
+
+# Build for production
+npm run build
+
+# Preview production build locally
+npm run preview
+```
+
+## Tech Stack
+
+- React 19 + Vite
+- Tailwind CSS 4
+- Lucide React Icons
+- Font Awesome Icons
+
+## Project Structure
+
+```
+grammar-master-class/
+├── src/
+│   ├── App.jsx      # Main application component
+│   ├── main.jsx     # Entry point
+│   ├── index.css    # Global styles
+│   └── App.css      # Component styles
+├── index.html       # HTML template
+├── vite.config.js   # Vite configuration
+├── tailwind.config.js
+├── postcss.config.js
+└── vercel.json      # Vercel deployment config
+```
+
+## License
+
+&copy; {new Date().getFullYear()} BIT English Club. All rights reserved.
